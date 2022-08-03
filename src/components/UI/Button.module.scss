@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.primaryButton {
+  background-color: $buttonColor;
+  border-radius: 80px;
+  border: none;
+  &:hover {
+    background-color: $hoverButtonColor;
+  }
+  &:disabled {
+    background-color: $disabledButtonColor;
+  }
+}

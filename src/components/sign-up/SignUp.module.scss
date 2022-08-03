@@ -1,0 +1,111 @@
+@use '../../styles/mixins.scss' as mixin;
+
+.signUp {
+  text-align: center;
+  margin-bottom: 100px;
+
+  @include mixin.medium-screen {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  @include mixin.small-screen {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  @include mixin.xsmall-screen {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form {
+  &__userinfo {
+    width: 380px;
+
+    @include mixin.small-screen {
+      width: 80%;
+      margin: 0 40px;
+    }
+
+    @include mixin.xsmall-screen {
+      width: 90%;
+    }
+  }
+  &__input {
+    margin-top: 50px;
+    width: 100%;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  &__error {
+    color: red;
+    text-align: start;
+  }
+
+  &__photo {
+    width: 380px;
+  }
+
+  &__position {
+    width: 380px;
+    display: flex;
+    margin: 43px auto 50px;
+    flex-direction: column;
+    text-align: start;
+
+    @include mixin.small-screen {
+      width: 80%;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    @include mixin.xsmall-screen {
+      width: 90%;
+    }
+  }
+}
+
+.position {
+  &__item {
+    margin-bottom: 7px;
+  }
+  &__tooltip {
+    margin-bottom: 11px;
+  }
+}
+
+.photo__info {
+  width: 70%;
+  padding: 12px 14px;
+  text-align: start;
+  color: #7e7e7e;
+  border: 1px solid #d0cfcf;
+  border-radius: 0 4px 4px 0;
+
+  @include mixin.small-screen {
+    margin: 0 40px 0 0;
+  }
+}
+
+.photo__item {
+  width: 100%;
+  display: flex;
+
+  @include mixin.small-screen {
+    width: 80%;
+    margin: 0 40px;
+  }
+
+  @include mixin.xsmall-screen {
+    width: 90%;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../../styles/mixins.scss' as mixin;
+
+.banner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/bg.jpeg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  padding: 164px 0 163px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 140px;
+
+  @include mixin.small-screen {
+    padding: 89px 0 88px;
+  }
+
+  @include mixin.xsmall-screen {
+    padding: 40px 0 71px;
+  }
+
+  &__text {
+    max-width: 380px;
+    color: #fff;
+    text-align: center;
+
+    @include mixin.small-screen {
+      margin-right: 16px;
+      margin-left: 16px;
+    }
+
+    @include mixin.xsmall-screen {
+      max-width: 328px;
+    }
+  }
+  &__heading {
+    margin-bottom: 21px;
+  }
+  &__description {
+    margin-bottom: 32px;
+
+    @include mixin.xsmall-screen {
+      margin-bottom: 36px;
+    }
+  }
+}

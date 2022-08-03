@@ -1,0 +1,8 @@
+@import 'scss-reset/_reset.scss';
+@import './variables.scss';
+@import './elements.scss';
+
+.App {
+  max-width: 1170px;
+  margin: 0 auto;
+}

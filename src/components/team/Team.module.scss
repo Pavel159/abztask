@@ -1,0 +1,39 @@
+@use '../../styles/mixins.scss' as mixin;
+
+.team {
+  text-align: center;
+  margin-bottom: 140px;
+  @include mixin.medium-screen {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  @include mixin.small-screen {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  @include mixin.xsmall-screen {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+
+  &__item {
+    text-align: center;
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    @include mixin.small-screen {
+      width: 50%;
+    }
+    @include mixin.xsmall-screen {
+      width: 100%;
+    }
+  }
+}

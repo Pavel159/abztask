@@ -1,0 +1,41 @@
+@use '../../styles/mixins.scss' as mixin;
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin: 17px 0;
+
+  @include mixin.medium-screen {
+    margin-left: 60px;
+  }
+  @include mixin.small-screen {
+    margin-left: 32px;
+  }
+  @include mixin.xsmall-screen {
+    margin-left: 16px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  margin: 13px 0;
+
+  @include mixin.medium-screen {
+    margin-right: 60px;
+  }
+  @include mixin.small-screen {
+    margin-right: 32px;
+  }
+  @include mixin.xsmall-screen {
+    margin-right: 16px;
+  }
+}
+
+.header__button {
+  &:nth-child(2) {
+    margin-left: 10px;
+  }
+}
