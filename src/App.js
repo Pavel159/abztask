@@ -28,7 +28,7 @@ function App() {
       console.log('total:', totalPages);
     });
   };
-  console.log(members);
+
   return (
     <div className='App'>
       <Header />
