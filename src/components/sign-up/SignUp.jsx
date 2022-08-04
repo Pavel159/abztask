@@ -27,7 +27,11 @@ const SignUp = (props) => {
   const phoneRegExp = /^((\+?3)?8)?0\d{9}$/;
 
   let validationSchema = yup.object().shape({
-    name: yup.string().typeError('Must be string').required('Name is required'),
+    name: yup
+      .string()
+      .typeError('Must be string')
+      .test('len', 'Must be more then 2 characters', (val) => val.length > 2)
+      .required('Name is required'),
     email: yup
       .string()
       .email('Enter valid email')
