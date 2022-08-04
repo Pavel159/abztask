@@ -1,10 +1,10 @@
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
-import SignUp from './components/sign-up/SignUp';
-import Team from './components/team/Team';
-
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import { fetchTeamMembers } from '../src/api/api';
+
+const Team = lazy(() => import('./components/team/Team'));
+const SignUp = lazy(() => import('./components/sign-up/SignUp'));
 
 function App() {
   const [members, setMembers] = useState([]);
@@ -33,6 +33,7 @@ function App() {
     <div className='App'>
       <Header />
       <Banner />
+      <Suspense fallback={<div>Content is loading...</div>}></Suspense>
       <Team
         members={members}
         currentPage={currentPage}
